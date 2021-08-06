@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Registrar</h1>
+
+      <form>
+        <div>
+          <label for="username">Usuario</label>
+          <i class="material-icons-outlined icon-user"> person </i>
+          <input id="username" type="text" placeholder="Digite seu usuario" />
+          <small class="invalid" id="username-error"></small>
+        </div>
+        <div>
+          <label for="password">Senha</label>
+          <i class="material-icons-outlined icon-password"> lock </i>
+          <input type="password" id="password" placeholder="Digite sua senha" />
+          <small class="invalid" id="password-error"></small>
+        </div>
+        <div>
+          <label for="repeat-password">Repita a senha</label>
+          <i class="material-icons-outlined icon-repeat"> lock </i>
+          <input
+            type="password"
+            id="repeat-password"
+            placeholder="Repita sua senha"
+          />
+          <small class="invalid" id="repeat-password-error"></small>
+        </div>
+        <button onclick="registerUser(event)">Registrar agora</button>
+      </form>
+
+      <div class="social" id="signUp">
+        <small>Ou registre-se com uma rede social</small>
+        <div>
+          <i class="material-icons-outlined"> facebook </i>
+          <i class="material-icons-outlined"> sports_esports </i>
+          <i class="material-icons-outlined"> android </i>
+        </div>
+      </div>
+
+      <footer>
+        <p>Já tem uma conta?</p>
+        <a class="link" href="index.html">Clique aqui</a>
+      </footer>
+    </main>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="text-success h1 p-3">Registrado com sucesso!</p>
+          </div>
+          <div class="modal-footer">
+            <a href="index.html" type="button" class="btn btn-outline-success"
+              >Logue agora</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
